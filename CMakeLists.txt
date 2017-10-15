@@ -1,4 +1,5 @@
 cmake_minimum_required (VERSION 2.6)
+enable_testing()
 project(Project-Euler)
 
 # Make everything output to /bin
@@ -10,12 +11,6 @@ option(EULER_COMPILE_CXX_SOLUTIONS "Enable C++ solutions (on by default)" on)
 option(EULER_COMPILE_SWIFT_SOLUTIONS "Enable swift solutions" off)
 option(EULER_COMPILE_RUST_SOLUTIONS "Enable rust solutions" off)
 option(EULER_COMPILE_PYTHON_SOLUTIONS "Enable python solutions" off)
-
-message("${EULER_COMPILE_C_SOLUTIONS}")
-message("${EULER_COMPILE_CXX_SOLUTIONS}")
-message("${EULER_COMPILE_SWIFT_SOLUTIONS}")
-message("${EULER_COMPILE_RUST_SOLUTIONS}")
-message("${EULER_COMPILE_PYTHON_SOLUTIONS}")
 
 # Determine languages to build based on options
 if(EULER_COMPILE_C_SOLUTIONS)
